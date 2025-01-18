@@ -13,3 +13,12 @@ Automated image monitoring and upload system for IoT testing.
 2. Install dependencies:
 ```bash
 pip install watchdog
+
+## Documentation
+
+### Prerequisites
+Install documentation requirements:
+```bash
+pip install -r requirements.txt
+pdoc --html --output-dir docs  monitor.py
+start docs\monitor.html

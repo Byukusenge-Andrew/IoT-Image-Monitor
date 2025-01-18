@@ -1,3 +1,30 @@
+"""
+Image Upload Monitor
+===================
+
+A Python script for monitoring a folder and automatically uploading new images
+to a remote server. Built for IoT device testing January 2025.
+
+Features:
+- Monitors specified folder for new image files (.jpg, .jpeg, .png)
+- Waits 30 seconds after file creation before uploading
+- Uploads files using curl to configured endpoint
+- Moves processed files to archive folder
+- Handles errors and file conflicts
+
+Example Usage:
+    python monitor.py
+
+Configuration:
+    watch_folder: "D:/cam"          # Folder to monitor
+    uploaded_folder: "D:/cam/uploaded"   # Archive location
+
+Dependencies:
+    - watchdog
+    - curl command line tool
+"""
+
+
 import os
 import time
 import subprocess
